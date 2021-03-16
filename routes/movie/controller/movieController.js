@@ -10,7 +10,7 @@ module.exports = {
 			let newCreatedMovie = await newMovie.save();
 
 			res.json({
-				newCreatedMovie,
+				data: newCreatedMovie,
 			});
 		} catch (e) {
 			console.log(e);
@@ -22,7 +22,7 @@ module.exports = {
 			let allList = await Movie.find({});
 
 			res.json({
-				allList: allList,
+				data: allList,
 			});
 		} catch (e) {
 			console.log(e);
